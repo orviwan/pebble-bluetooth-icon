@@ -15,7 +15,6 @@ Pebble library for easily adding a bluetooth connection icon to your app.
 static BluetoothLayer *s_bluetooth_layer;
 
 static void window_load(Window *window) {
-
   s_bluetooth_layer = bluetooth_layer_create();
   layer_add_child(window_layer, s_bluetooth_layer);
 }
@@ -28,15 +27,15 @@ static void window_unload(Window *window) {
 
 ## Additional Settings
 
-Position the bluetooth on screen.
+Position the bluetooth icon on screen.
 
     void bluetooth_set_position(GPoint position);
 
-Vibrate on disconnect (default: true).
+Vibrate on disconnect (default: true, double pulse).
 
     void bluetooth_vibe_disconnect(bool vibe);
 
-Vibrate on connect (default: true).
+Vibrate on connect (default: true, short pulse).
 
     void bluetooth_vibe_connect(bool vibe);
 
