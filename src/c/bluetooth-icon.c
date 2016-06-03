@@ -55,7 +55,7 @@ static void bluetooth_connection_callback(bool connected) {
 // Force the icon to refresh
 static void bluetooth_refresh() {
   BluetoothIconSettings *data = layer_get_data(s_bluetooth_layer);
-  bluetooth_connection_callback(data->vibe_connect);
+  bluetooth_connection_callback(data->is_connected);
 }
 
 // Create a set of default settings.
