@@ -1,6 +1,6 @@
 {
-  "name": "bluetooth-icon",
-  "author": "MakeAwesomeHappen",
+  "name": "pebble-bluetooth-icon",
+  "author": "Jon Barlow",
   "version": "1.0.0",
   "files": ["dist.zip"],
   "keywords": ["pebble-package"],
