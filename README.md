@@ -2,7 +2,7 @@
 
 Pebble library for easily adding a bluetooth connection icon to your app.
 
-![Screenshot of library in action](info/animation.gif)
+![Screenshot of library in action](https://raw.githubusercontent.com/orviwan/pebble-bluetooth-icon/master/info/animation.gif)
 
 ## Usage
 
