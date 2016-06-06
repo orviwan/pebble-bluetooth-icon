@@ -1,7 +1,9 @@
 {
   "name": "pebble-bluetooth-icon",
   "author": "Jon Barlow",
-  "version": "1.0.2",
+  "license": "MIT",
+  "repository": "orviwan/pebble-bluetooth-icon",
+  "version": "1.0.4",
   "files": ["dist.zip"],
   "keywords": ["pebble-package"],
   "dependencies": {},

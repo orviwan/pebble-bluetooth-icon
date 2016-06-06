@@ -1,5 +1,5 @@
 #include <pebble.h>
-#include "bluetooth-icon.h"
+#include <bluetooth-icon.h>
 
 typedef struct BluetoothIconSettings {
   bool vibe_disconnect;
