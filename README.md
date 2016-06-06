@@ -1,4 +1,4 @@
-# bluetooth-icon
+# pebble-bluetooth-icon
 
 Pebble library for easily adding a bluetooth connection icon to your app.
 
@@ -6,7 +6,7 @@ Pebble library for easily adding a bluetooth connection icon to your app.
 
 ## Usage
 
-`pebble package install ...`
+`pebble package install pebble-bluetooth-icon`
 
 ````c
 // This is a simple example, demonstrating the basic usage.
