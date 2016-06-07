@@ -3,7 +3,7 @@
   "author": "Jon Barlow",
   "license": "MIT",
   "repository": "orviwan/pebble-bluetooth-icon",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "files": ["dist.zip"],
   "keywords": ["pebble-package"],
   "dependencies": {},

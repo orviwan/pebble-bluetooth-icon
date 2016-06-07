@@ -10,7 +10,7 @@ Pebble library for easily adding a bluetooth connection icon to your app.
 
 ````c
 // This is a simple example, demonstrating the basic usage.
-#include <bluetooth-icon/bluetooth-icon.h>
+#include <pebble-bluetooth-icon/pebble-bluetooth-icon.h>
 
 static BluetoothLayer *s_bluetooth_layer;
 
