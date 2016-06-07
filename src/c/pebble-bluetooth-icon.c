@@ -1,5 +1,6 @@
 #include <pebble.h>
 #include <pebble-bluetooth-icon.h>
+#include <pebble-events/pebble-events.h>
 
 typedef struct BluetoothIconSettings {
   bool vibe_disconnect;
@@ -14,6 +15,7 @@ typedef struct BluetoothIconSettings {
 } BluetoothIconSettings;
 
 static Layer *s_bluetooth_layer, *s_bluetooth_icon_layer, *s_bluetooth_circle_layer;
+static EventHandle s_handle;
 
 static GPath *s_bluetooth_path_ptr = NULL;
 static GPathInfo BT_PATH_INFO = {
@@ -88,15 +90,17 @@ BluetoothLayer* bluetooth_layer_create() {
   layer_set_update_proc(s_bluetooth_icon_layer, bluetooth_icon_layer_update_callback);
   layer_add_child(s_bluetooth_layer, s_bluetooth_icon_layer);
 
-  bluetooth_connection_callback(bluetooth_connection_service_peek());
-  bluetooth_connection_service_subscribe(bluetooth_connection_callback);
+  bluetooth_connection_callback(connection_service_peek_pebble_app_connection());
+  s_handle = events_connection_service_subscribe((ConnectionHandlers) {
+    .pebble_app_connection_handler = bluetooth_connection_callback
+  });
 
   return s_bluetooth_layer;
 }
 
 // Destroy the layer and its contents.
 void bluetooth_layer_destroy(BluetoothLayer *bluetooth_layer) {
-  bluetooth_connection_service_unsubscribe();
+  events_connection_service_unsubscribe(s_handle);
   gpath_destroy(s_bluetooth_path_ptr);
   s_bluetooth_path_ptr = NULL;
 
